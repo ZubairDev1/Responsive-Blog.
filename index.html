@@ -1,0 +1,155 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link rel="stylesheet" href="main.css">
+    </head>
+    <body style="font-family:Verdana; background-color: #ffff;">
+    
+    <div style="background-color: #86d605ce;padding:15px;">
+      <h1>BLOG</h1>
+      <h3>Get the latest gists about things happening around the world</h3>
+    </div>
+    
+    <div style="overflow:auto">
+      <div class="navmenu">
+       <a href="index.html"><div class="menuitem">Lifestyle</div></a>
+        <a href="index.html"><div class="menuitem">Sport</div></a>
+        <a href="index.html"><div class="menuitem">Entertament</div></a>
+        <a href="index.html"><div class="menuitem">Travel</div></a>
+
+
+<div class="card">
+  <img src="./img/example_img_girl.jpg" alt="Hoddy" style="width:100%">
+  <h1>Hoddy</h1>
+  <p class="price">$19.99</p>
+  <p>Some text about the hoddy. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+  <p><button>Visit site</button></p>
+</div>
+
+<div class="container">
+  <form action="">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="Email">Email</label>
+    <input type="text" id="Email" placeholder="Your Email..">
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+      </div>
+    <br>
+      <div class="main">
+
+        <div class="slideshow-container">
+
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="./img/img_5terre.jpg" style="width:100%">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="./img/img_food.jpg" style="width:100%">
+          </div>
+          
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="./img/flowers.jpg" style="width:100%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+          </div>
+
+        <h2>The pink silk tree</h2>
+        <img src="./img/img_flowers.jpg" style="width:100%">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, eum vel, reprehenderit impedit neque molestiae iure sequi corrupti dolor repudiandae odio, aspernatur quam sint! Illo perspiciatis sequi harum libero neque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem neque iure asperiores, ut minima ab aut illum, suscipit vel dolores architecto, delectus eius cupiditate dolor qui. In nesciunt vel deleniti.</p>
+
+        <div class="icard">
+          <h2></h2>
+          <img src="./img/img_food.jpg" class="fakeimg" style="height:200px;">
+          <p>Some text..</p>
+          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </div>
+
+      </div>
+
+    
+      <div class="right">
+        <h2>Trending News</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolore natus perferendis provident totam veniam ratione ipsa magni, at enim, voluptatibus vero adipisci. Officia quo ut nostrum magni, similique ullam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam rem pariatur error dolor accusamus deleniti laboriosam quasi nam omnis, dolore inventore corporis officiis laborum adipisci et consequuntur provident ipsum ullam!</p>
+        <form action="">
+          <div class="containers">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.</p>
+          </div>
+        
+          <div class="containers" style="background-color:white">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+            <label>
+              <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+            </label>
+          </div>
+        
+          <div class="containers">
+            <input type="submit" value="Subscribe">
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    
+    <Footer style=" height: 10%; text-align: center; background-color: #86d605ce;">&copy;By Zubair-Dev. All Rights Reserved</Footer>    
+    
+</body>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+    
+</html>
